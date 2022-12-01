@@ -1,0 +1,15 @@
+{
+	// Code Runner
+	"code-runner.executorMap": {
+		"python": "cd $dir && python $fullFileName < $fileNameWithoutExt-input.txt",
+		"typescript": "deno run --allow-read",
+		"rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+		"elixir": "elixir",
+		"kotlin": "elixir"
+		// "javascript": "node",
+		// "dart": "dart",
+		// "lua": "lua",
+		// "nim": "nim compile --verbosity:0 --hints:off --run",
+	},
+	"code-runner.clearPreviousOutput": true,
+}

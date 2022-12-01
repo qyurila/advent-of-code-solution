@@ -1,0 +1,8 @@
+// This file has no effect on VSCode.
+// This is just an showcase of my custom keybindings.
+[
+	{
+		"key": "alt+f5",
+		"command": "code-runner.run"
+	}
+]

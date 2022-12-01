@@ -1,11 +1,20 @@
 {
+	"typescript": {
+		"lineWidth": 100,
+		"indentWidth": 3,
+		"useTabs": true,
+		"semiColons": "asi",
+		"quoteStyle": "preferSingle"
+	},
 	"json": {
 		"useTabs": true
 	},
 	"includes": [
+		"**/*.ts",
 		"**/*.{json,jsonc}"
 	],
 	"plugins": [
+		"https://plugins.dprint.dev/typescript-0.78.0.wasm",
 		"https://plugins.dprint.dev/json-0.16.0.wasm"
 	]
 }

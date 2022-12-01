@@ -2,7 +2,7 @@
 	// Code Runner
 	"code-runner.executorMap": {
 		"python": "cd $dir && python $fullFileName < $fileNameWithoutExt-input.txt",
-		"typescript": "deno run --allow-read",
+		"typescript": "cd $dir && deno run --allow-read $fullFileName < $fileNameWithoutExt-input.txt",
 		"rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
 		"elixir": "elixir",
 		"kotlin": "elixir"
@@ -12,4 +12,15 @@
 		// "nim": "nim compile --verbosity:0 --hints:off --run",
 	},
 	"code-runner.clearPreviousOutput": true,
+
+	// Formatter
+	"[typescript][json][jsonc]": {
+		"editor.defaultFormatter": "dprint.dprint",
+		"editor.formatOnSave": true
+	},
+
+	// Typescript - Deno
+	"deno.enable": true,
+	"deno.lint": true,
+	"deno.importMap": "./import_map.json"
 }

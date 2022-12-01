@@ -1,0 +1,11 @@
+{
+	"json": {
+		"useTabs": true
+	},
+	"includes": [
+		"**/*.{json,jsonc}"
+	],
+	"plugins": [
+		"https://plugins.dprint.dev/json-0.16.0.wasm"
+	]
+}

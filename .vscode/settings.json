@@ -1,7 +1,7 @@
 {
 	// Code Runner
 	"code-runner.executorMap": {
-		"python": "cd $dir && python $fullFileName < $fileNameWithoutExt-input.txt",
+		"python": "cd $dir && python $fileName < $fileNameWithoutExt-input.txt",
 		"typescript": "cd $dir && deno run --allow-read $fullFileName < $fileNameWithoutExt-input.txt",
 		"rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
 		"elixir": "elixir",

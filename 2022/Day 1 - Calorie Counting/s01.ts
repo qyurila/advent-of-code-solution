@@ -1,6 +1,5 @@
-const buffer = new Uint8Array(65_536)
-const bytesLength = await Deno.stdin.read(buffer) as number
-const input = new TextDecoder().decode(buffer.subarray(0, bytesLength))
+import { readFileSync } from 'fs'
+const input = readFileSync(0, 'utf-8')
 
 const solution = () =>
 	input

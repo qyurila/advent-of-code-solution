@@ -3,6 +3,8 @@
 ## Env
 
 - Python: 3.11.0
+- TypeScript: 4.9.3
+  - Node.js: 18.12.1
 
 ## Tips
 
@@ -13,10 +15,32 @@
       - or `for line in open(0)`
 
 - TypeScript
-  - Deno offers their own stdin (and stdout) API: `Deno.stdin.read`
+  - ~~Deno offers their own stdin (and stdout) API: `Deno.stdin.read`~~
+  - Node offers two method for stdin.
 
 ```ts
+// Deno
 const buffer = new Uint8Array(65_536)
 const bytesLength = await Deno.stdin.read(buffer) as number
 const input = new TextDecoder().decode(buffer.subarray(0, bytesLength))
+
+// Node
+// readFileSync
+import { readFileSync } from 'fs'
+const input = readFileSync(0, 'utf-8')
+
+// Node
+// readline
+import { stdin } from 'node:process'
+import * as readline from 'node:readline'
+
+const rl = readline.createInterface({ input: stdin })
+
+rl.on('line', (line) => {
+  // Handle line
+})
+// or
+for await (const line of rl) {
+  // Handle line
+}
 ```

@@ -1,7 +1,9 @@
 import { readFileSync } from 'fs'
+import * as _ from 'lodash/fp'
+
 const input = readFileSync(0, 'utf-8')
 
-const solution = () =>
+const solution1 = () =>
 	input
 		.split('\n\n')
 		.map(block =>
@@ -14,4 +16,17 @@ const solution = () =>
 			(prev, curr) => prev > curr ? prev : curr,
 		)
 
-console.log(solution())
+const solution2 = () =>
+	_.flow(
+		_.split('\n\n'),
+		_.map(
+			_.flow([
+				_.split('\n'),
+				_.map(_.toNumber),
+				_.sum,
+			]),
+		),
+		_.max,
+	)(input)
+
+console.log(solution2())

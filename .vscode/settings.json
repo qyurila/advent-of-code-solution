@@ -1,8 +1,8 @@
 {
 	// Code Runner
 	"code-runner.executorMap": {
-		"python": "cd $dir && python $fileName < $fileNameWithoutExt-input.txt",
-		"typescript": "cd $dir && tsx $fileName < $fileNameWithoutExt-input.txt",
+		"python": "cd $dir && python $fileName < input.txt",
+		"typescript": "cd $dir && tsx $fileName < input.txt",
 		"rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
 		"elixir": "elixir",
 		"kotlin": "elixir"

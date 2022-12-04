@@ -1,16 +1,10 @@
 {
-	"files.trimTrailingWhitespace": true,
-	"editor.formatOnSave": true,
-
-	"elixirLS.dialyzerEnabled": true,
-
 	// Code Runner
 	"code-runner.executorMap": {
 		"python": "cd $dir && python $fileName < input.txt",
 		"typescript": "cd $dir && tsx $fileName < input.txt",
 		"rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
-		"elixir": "cd $dir && mix run --no-mix-exs $fileName < input.txt",
-		// "elixir": "cd $dir && elixirc $fileName < input.txt",
+		"elixir": "elixir",
 		"kotlin": "elixir"
 		// "javascript": "node",
 		// "dart": "dart",
@@ -21,10 +15,12 @@
 
 	// Formatter
 	"[typescript][json][jsonc]": {
-		"editor.defaultFormatter": "dprint.dprint"
+		"editor.defaultFormatter": "dprint.dprint",
+		"editor.formatOnSave": true
 	},
 
-	"[elixir]": {
-		"editor.defaultFormatter": "JakeBecker.elixir-ls"
-	}
+	// Typescript - Deno
+	"deno.enable": true,
+	"deno.lint": true,
+	"deno.importMap": "./import_map.json"
 }

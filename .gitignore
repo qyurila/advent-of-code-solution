@@ -1,14 +1,3 @@
 node_modules/
 
 input.txt
-
-# From `mix new aoc2022` which is for Elixir
-/_build/
-/cover/
-/deps/
-/doc/
-/.fetch
-erl_crash.dump
-*.ez
-aoc2022-*.tar
-/tmp/

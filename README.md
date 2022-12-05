@@ -18,6 +18,9 @@
   - ~~Deno offers their own stdin (and stdout) API: `Deno.stdin.read`~~
   - Node offers two method for stdin.
 
+<details>
+<summary>Example Snippets</summary>
+
 ```ts
 // Deno
 const buffer = new Uint8Array(65_536)
@@ -43,3 +46,9 @@ for await (const line of rl) {
   // Handle line
 }
 ```
+
+</details>
+
+- Elixir
+  - `IO.read(:stdio, :eof)` does not work for some reason. It just stuck after getting EOF.
+    - Walkaround: use `File.read!("./input.txt")` instead.

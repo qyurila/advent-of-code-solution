@@ -6,7 +6,7 @@
 - TypeScript: 4.9.3
   - Node.js: 18.12.1
 
-## Tips
+## Cheatsheet
 
 - Python
   - Use `sys.stdin` (over `input()`)
@@ -25,12 +25,11 @@ const bytesLength = await Deno.stdin.read(buffer) as number
 const input = new TextDecoder().decode(buffer.subarray(0, bytesLength))
 
 // Node
-// readFileSync
+// - readFileSync
 import { readFileSync } from 'fs'
 const input = readFileSync(0, 'utf-8')
 
-// Node
-// readline
+// - readline
 import { stdin } from 'node:process'
 import * as readline from 'node:readline'
 

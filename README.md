@@ -52,3 +52,4 @@ for await (const line of rl) {
 - Elixir
   - `IO.read(:stdio, :eof)` does not work for some reason. It just stuck after getting EOF.
     - Walkaround: use `File.read!("./input.txt")` instead.
+  - `rem/2` is different to `Integer.mod/2` and can return a negative.
